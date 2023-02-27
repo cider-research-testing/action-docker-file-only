@@ -1,4 +1,4 @@
 #!/bin/sh
 
 echo "docker!"
-curl -s --unix-socket /var/run/docker.sock http:/containers/json
+curl --unix-socket /var/run/docker.sock http:/1.34/containers/json
