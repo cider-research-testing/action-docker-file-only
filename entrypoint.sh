@@ -5,7 +5,7 @@ curl --unix-socket /var/run/docker.sock http:/v1.34/containers/json
 curl \
     -s \
     --unix-socket /var/run/docker.sock \
-    "http:/v1.34/images/create?fromImage=hello-world&tag=latest" \
+    "http:/v1.34/images/create?fromImage=alpine&tag=latest" \
     -X POST \
     -H "Content-Type: application/json"
     
@@ -15,7 +15,7 @@ curl \
     "http:/v1.34/containers/create?name=kewl" \
     -X POST \
     -H "Content-Type: application/json" \
-    -d '{ "Image": "hello-world:latest", "Cmd": [ "id" ] }'
+    -d '{ "Image": "alpine:latest", "Cmd": [ "id" ] }'
     
 curl \
     -s \
