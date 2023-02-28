@@ -20,7 +20,7 @@ curl \
     "http:/v1.34/containers/create?name=kewl" \
     -X POST \
     -H "Content-Type: application/json" \
-    -d '{ "Image": "alpine:latest", "Volumes": $VOLUMES, "Cmd": [ "cat /home/runner/work/workflow-tester/workflow-tester" ] }'
+    -d '{ "Image": "alpine:latest", "Volumes": {\"$HOST_PATH\":{\"bind\":\"$CONTAINER_PATH\",\"mode\":\"rw\"}}, "Cmd": [ "cat /home/runner/work/workflow-tester/workflow-tester" ] }'
     
 curl \
     -s \
