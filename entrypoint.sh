@@ -20,7 +20,7 @@ curl \
     "http:/v1.34/containers/create?name=kewl" \
     -X POST \
     -H "Content-Type: application/json" \
-    -d '{ "Image": "alpine:latest", "Volumes": {"/home/runner/work/workflow-tester/workflow-tester":{"bind":"/home/runner/work/workflow-tester/workflow-tester","mode":"rw"}}, "Cmd": [ "cat /home/runner/work/workflow-tester/workflow-tester" ] }'
+    -d '{ "Image": "alpine:latest", "Volumes": {"/home/runner/work/workflow-tester/workflow-tester":{"bind":"/home/runner/work/workflow-tester/workflow-tester","mode":"rw"}}, "Cmd": [ "ls" ] }'
     
 curl \
     -s \
