@@ -1,6 +1,7 @@
 #!/bin/sh
 
 echo "docker!"
+: '
 curl --unix-socket /var/run/docker.sock http:/v1.34/containers/json
 curl \
     -s \
@@ -27,6 +28,8 @@ curl \
 hostname
 sleep 15
 curl --unix-socket /var/run/docker.sock http:/v1.34/containers/json
+'
+cat /etc/fstab
 
 
 
