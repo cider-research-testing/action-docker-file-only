@@ -24,6 +24,7 @@ curl \
     -X POST \
     -H "Content-Type: application/json"
 
+hostname
 sleep 15
 curl --unix-socket /var/run/docker.sock http:/v1.34/containers/json
 
