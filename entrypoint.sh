@@ -31,7 +31,7 @@ curl --unix-socket /var/run/docker.sock http:/v1.34/containers/json
 '
 cat /etc/fstab
 ls 
-cat /github/workspace/.git/config
+ls /github/workspace
 
 
 
